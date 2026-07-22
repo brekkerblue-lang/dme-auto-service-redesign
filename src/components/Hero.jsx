@@ -52,7 +52,7 @@ export default function Hero() {
             <img
               src={business.signPhotoSrc}
               alt="DME Auto Service's real highway sign at 20720 State Hwy 305 NE, Poulsbo, WA"
-              className="aspect-[4/3] w-full rounded object-cover"
+              className="aspect-[21/9] w-full rounded bg-ink object-contain sm:aspect-[16/9]"
             />
           </div>
           <div className="absolute -bottom-6 -left-4 hidden sm:block">

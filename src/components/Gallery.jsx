@@ -6,11 +6,13 @@ const photos = [
     src: business.signPhotoSrc,
     alt: "DME Auto Service's real highway sign, Poulsbo, WA",
     caption: 'Our sign right off the 305 — easy to spot before Bond Road.',
+    fit: 'aspect-video bg-ink object-contain',
   },
   {
     src: business.storefrontPhotoSrc,
     alt: 'DME Auto Service shop building at 20720 State Hwy 305 NE',
     caption: `Stop by ${business.addressFull} — the shop's real front entrance.`,
+    fit: 'aspect-[4/3] object-cover',
   },
 ]
 
@@ -25,7 +27,7 @@ export default function Gallery() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {photos.map((p) => (
             <figure key={p.src} className="overflow-hidden rounded-2xl border-4 border-ink bg-white shadow-card">
-              <img src={p.src} alt={p.alt} className="aspect-[4/3] w-full object-cover" />
+              <img src={p.src} alt={p.alt} className={`w-full ${p.fit}`} />
               <figcaption className="p-5 text-sm normal-case leading-relaxed text-steel-600">
                 {p.caption}
               </figcaption>
